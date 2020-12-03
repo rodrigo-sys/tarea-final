@@ -7,10 +7,6 @@ body {
     font-family: 'Roboto';
 }
 
-h1, h2, #botones {
-  text-align: center;
-}
-
 h1{
   background-color: #ededed;
   padding: 1em 0;
@@ -25,7 +21,6 @@ h1{
 h2{
   margin-bottom: 15px;
   text-decoration: underline;
-
 }
 
 code {
@@ -40,14 +35,16 @@ code {
 #texto_actual {
   margin: 25px 50px 25px 50px;
 }
+
 h1,h2,h3,h4,p{
   text-align: center;
 }
+
 #anterior {
   margin-right: 20px;
 }
-#anterior, #siguiente {
 
+#anterior, #siguiente {
   background-color: #d64078;
   color: white;
   width: 10em;
@@ -55,13 +52,14 @@ h1,h2,h3,h4,p{
   padding: 10px;
   margin-top:10px;
   margin-bottom: 20px;
-
 }
+
 #anterior {
   position:absolute;
   bottom: 5%;
   left:20%;
 }
+
 #siguiente {
   position:absolute;
   bottom: 5%;
@@ -72,10 +70,6 @@ h1,h2,h3,h4,p{
  text-decoration: underline;
  cursor: pointer;
  background-color: #862348;
-}
-
-h1, h2 {
-  text-align: center;
 }
 
 .centrado {
