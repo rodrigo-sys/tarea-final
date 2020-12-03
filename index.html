@@ -3,31 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <title>Tutorial GIT</title>
+  <link rel="stylesheet" href="./index.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
 </head>
 <body>
-  <h1>Tutorial GIT</h1>
+  <h1>TUTORIAL GIT</h1>
 
   <div id="texto_actual">
   </div>
-
-  <button id="anterior">Anterior</button>  <button id="siguiente">Siguiente</button>
+  <div id="botones">
+    <div id="anterior">Anterior</div>  <div id="siguiente">Siguiente</div>
+  </div>
 
   <div style="display: none;">
 
     <div class="texto">
-      <h1>Introducción</h1>
-      <p>Consectetur libero excepturi incidunt nostrum exercitationem libero? Reprehenderit distinctio quo repellat dolorum adipisci Earum reprehenderit numquam voluptates reprehenderit aspernatur? Aliquid amet dolorum molestias veritatis neque corrupti, temporibus! Quod magnam recusandae?</p>
+      <h2>¿Qué es GIT?</h2>
+      <p> Git es un sistema de control de versiones desarrollado en 2005 por Linus Thorvalds, el creador de Linux, y publicado bajo la licencia de software libre GPLv2 de GNU. La particularidad de esta herramienta es que, aunque guarda un repositorio central para cada proyecto, todos los participantes descargan una copia local del mismo en su propio dispositivo. Cada una de estas copias constituye una copia completa de todo el contenido del repositorio, por lo que no es necesario estar conectado a la red para trabajar. Además, estos archivos sirven como copia de seguridad en caso de que el repositorio principal falle o resulte dañado. Los cambios en los archivos pueden intercambiarse con todos los demás participantes del proyecto en cualquier momento y, si corresponde, añadirse al repositorio.  </p>
     </div>
 
     <div class="texto">
-      <h1>Nudo</h1>
-      <p>Amet ipsum fugiat itaque facere distinctio quis. Nesciunt ex recusandae accusantium distinctio in accusantium incidunt Quo nobis voluptas illo quasi alias eum, laboriosam. Ducimus nobis eveniet qui rerum eius Ipsum</p>
+      <h2>Conceptos básicos de Git</h2>
+
+      </ul>
+        <li>Git se basa en snapshots (instantáneas) del código en un estado determinado, que viene dado por el autor y la fecha.</li>
+        <li>Un Commit es un conjunto de cambios guardados en el repositorio de Git y tiene un identificador SHA1 único.</li>
+        <li>Las ramas (branches) se pueden pensar como una línea de tiempo a partir de los commit. Hay siempre como mínimo una rama principal o predefinida llamada Master.</li>
+        <li>Head es el puntero al último commit en la rama activa.</li>
+        <li>Remote se refiere a sitios que hospedan repositorios remotos como GitHub.</li>
+      <ul>
     </div>
 
     <div class="texto">
-      <h1>Desenlace</h1>
-      <p>Adipisicing eligendi dolore autem eius dicta error! Nulla quia aspernatur nemo pariatur blanditiis unde consequuntur. Vero eum aut adipisci iste facilis? Eum rem commodi non impedit iste maxime Mollitia eos.</p>
+      <h2>Ayuda de Git</h2>
+      <p>Con git help en el terminal obtenemos ayuda.
+
+Vamos a mirar la ayuda de configuración con</p>
+      <img id="workflow-git" src="./git-workflow.png" alt="workflow git" class="centrado">
     </div>
 
   <script src="index.js"></script>
