@@ -7,25 +7,15 @@ body {
     font-family: 'Roboto';
 }
 
-h1, h2, #botones {
-  text-align: center;
-}
-
 h1{
   background-color: #ededed;
   padding: 1em 0;
   color: #414142;
-
-  /* line-height: 1.5em; */
-  /* font-family: Arial; */
-  /* box-sizing: border-box; */
-  /* font-size: 1em; */
 }
 
 h2{
   margin-bottom: 15px;
   text-decoration: underline;
-
 }
 
 code {
@@ -39,15 +29,25 @@ code {
 
 #texto_actual {
   margin: 25px 50px 25px 50px;
+
+  margin: auto;
+  width: 50%;
 }
-h1,h2,h3,h4,p{
+
+img {
+  margin: auto;
+  width: 100%;
+}
+
+h1,h2,h3,h4, #texto_actual, #botones{
   text-align: center;
 }
+
 #anterior {
   margin-right: 20px;
 }
-#anterior, #siguiente {
 
+#anterior, #siguiente {
   background-color: #d64078;
   color: white;
   width: 10em;
@@ -55,27 +55,13 @@ h1,h2,h3,h4,p{
   padding: 10px;
   margin-top:10px;
   margin-bottom: 20px;
-
-}
-#anterior {
-  position:absolute;
-  bottom: 5%;
-  left:20%;
-}
-#siguiente {
-  position:absolute;
-  bottom: 5%;
-  right:20%
 }
 
 #anterior:hover, #siguiente:hover {
  text-decoration: underline;
  cursor: pointer;
- background-color: #862348;
-}
-
-h1, h2 {
-  text-align: center;
+ /* background-color: #862348; */
+ background-color: black;
 }
 
 .centrado {
@@ -83,7 +69,3 @@ h1, h2 {
   margin-left: auto;
   margin-right: auto;
 }
-
-/* img#workflow-git { */
-/*   width: 70%; */
-/* } */
