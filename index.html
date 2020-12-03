@@ -1,112 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Tutorial GIT</title>
-  <link rel="stylesheet" href="./index.css">
+  <head>
+    <meta charset="UTF-8">
+    <title>Tutorial GIT</title>
+    <link rel="stylesheet" href="./index.css">
 
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
-</head>
-<body>
-  <h1>TUTORIAL GIT</h1>
+  </head>
+  <body>
+    <h1>TUTORIAL GIT</h1>
+    <i class="flecha flecha-izquierda"></i>
+    <i class="flecha flecha-derecha"></i>
 
-  <div id="texto_actual">
-  </div>
-  <div id="botones">
-    <div id="anterior">Anterior</div>  <div id="siguiente">Siguiente</div>
-  </div>
-
-  <div style="display: none;">
-
-    <div class="texto">
-      <h1>Conceptos básicos de Git</h1>
-      <h2>¿Qué es GIT?</h2>
-      <p> Git es un sistema de control de versiones desarrollado en 2005 por Linus Thorvalds, el creador de Linux, y publicado bajo la licencia de software libre GPLv2 de GNU. La particularidad de esta herramienta es que, aunque guarda un repositorio central para cada proyecto, todos los participantes descargan una copia local del mismo en su propio dispositivo. Cada una de estas copias constituye una copia completa de todo el contenido del repositorio, por lo que no es necesario estar conectado a la red para trabajar. Además, estos archivos sirven como copia de seguridad en caso de que el repositorio principal falle o resulte dañado. Los cambios en los archivos pueden intercambiarse con todos los demás participantes del proyecto en cualquier momento y, si corresponde, añadirse al repositorio.  </p>
+    <div id="botones">
+      <div id="anterior">Anterior</div>  <div id="siguiente">Siguiente</div>
+    </div>
+    <div id="texto_actual">
     </div>
 
-    <div class="texto">
-      <h1>Conceptos básicos de Git</h1>
-      <h2>Crear un repositorio nuevo</h2>
-      <p>Crea un directorio nuevo, ábrelo y ejecuta <code>git init</code> para crear un nuevo repositorio de git</p>
-    </div>
-    
-    <div class="texto">
-      <h1>Conceptos básicos de Git</h1>
-      <h2>Hacer un checkout a un repositorio</h2>
-      <p>Crea una copia local del repositorio ejecutando: <code>git clone /ruta/del/repositorio</code> </p>
-      <p>‎      ‏‏‎</p>
-      <p>Si utilizas un servidor remoto, ejecuta: <code>git clone username@host:/ruta/del/repositorio</code> </p> 
-    </div>
+    <div style="display: none;">
 
-    <div class="texto">
-      <h1>Conceptos básicos de Git</h1>
-      <h2>Flujo de trabajo</h2>
-      <p>Tu repositorio local está compuesto por tres "árboles" administrados por git.</p> 
-      <p>El primero es tu DIRECTORIO DE TRABAJO, que contiene los archivos.</p> 
-      <p>El segundo es el INDEX, que actúa como una zona intermedia.</p> 
-      <p>Y, finalmente se encuentra el HEAD, que apunta al último commit realizado.</p>
-      <div align="center"><img src="arbol.png" alt></div>
-    </div>
+      <div class="texto">
+        <h2>¿Qué es GIT?</h2>
+        <p>Git es un sistema de control de versiones desarrollado en 2005 por Linus Thorvalds, el creador de Linux, y publicado bajo la licencia de software libre GPLv2 de GNU. La particularidad de esta herramienta es que, aunque guarda un repositorio central para cada proyecto, todos los participantes descargan una copia local del mismo en su propio dispositivo. Cada una de estas copias constituye una copia completa de todo el contenido del repositorio, por lo que no es necesario estar conectado a la red para trabajar. Además, estos archivos sirven como copia de seguridad en caso de que el repositorio principal falle o resulte dañado. Los cambios en los archivos pueden intercambiarse con todos los demás participantes del proyecto en cualquier momento y, si corresponde, añadirse al repositorio.</p>
+      </div>
 
-    <div class="texto">
-      <h1>Conceptos básicos de Git</h1>
-      <h2>Add y Commit</h2>
-      <p>Puedes registrar cambios (añadirlos al INDEX) usando <code>git add < nombredelfichero ></code> o <code>git add .</code> </p>
-      <p>Este es el primer paso en el flujo de trabajo básico. Para hacer commit a estos usa: <code>git commit -m "Mensaje del commit"</code></p>
-      
-      <p>Ahora el archivo está incluído en el HEAD, pero aún no lo está en tu repositorio remoto.</p>
-    </div>
-    
-    <div class="texto">
-      <h1>Conceptos básicos de Git</h1>
-      <h2>Envío de cambios</h2>
-      <p>Tus cambios ahora están en el HEAD de tu copia local. Para enviar estos cambios a tu repositorio remoto ejecuta: <code>git push origin master</code> </p>
-      <p>Reemplaza "master" por la rama a la que quieras enviar tus cambios.</p>
-      <p>     ‏‏‎</p>
-      <p>Si no has clonado un repositorio ya existente y quieres conectar tu repositorio local a un repositorio remoto, debes usar: <code>git remote add origin < server > </code> </p>
-      <p>Ahora podrás subir tus cambios al repositorio remoto seleccionado.</p>
-    </div>  
+      <div class="texto">
+        <h2>Crear un repositorio nuevo</h2>
+        <p>Crea un directorio nuevo, ábrelo y ejecuta</p>
+        <code>git init</code>
+        <p>para crear un nuevo repositorio de git</p>
+      </div>
 
-    <div class="texto">
-      <h1>Conceptos básicos de Git</h1>
-      <h2>Ramas</h2>
-      <p>Las ramas son utilizadas para desarrollar funcionalidades aisladas unas de otras. La rama MASTER es la rama "por defecto" cuando creas un repositorio. Crea nuevas ramas durante el desarrollo y fusiónalas a la rama principal cuando termines.</p>
-      <div align="center"><img src="branches.png" alt></div>
-      <p>Crea una nueva rama llamada "feature_x" y cámbiate a ella usando: <code>git checkout -b feature_x</code> </p>
-      <p>vuelve a la rama principal <code>git checkout master</code> </p>
-      <p>y borra la rama <code>git branch -d feature_x</code> </p>
-      <p>     </p>
-      <p>Una rama nueva no estará disponible para las demás a menos que subas (push) la rama a tu repositorio remoto utilizando: <code>git push origin < branch ></code> </p>
-    </div>
+      <div class="texto">
+        <h2>Hacer un checkout a un repositorio</h2>
+        <p>Crea una copia local del repositorio ejecutando</p>
+        <code>git clone /ruta/del/repositorio</code>
+        <br><br>
+        <p>Si utilizas un servidor remoto, ejecuta</p> 
+        <code>git clone username@host:/ruta/del/repositorio</code>
+      </div>
 
-    <div class="texto">
-      <h1>Conceptos básicos de Git</h1>
-      <h2>Etiquetas</h2>
-      <p>Se recomienda crear etiquetas para cada nueva versión publicada de un software. Este concepto no es nuevo, ya que estaba disponible en SVN.</p>
-      <p>Puedes crear una nueva etiqueta llamada 1.0.0 ejecutando: <code>git tag 1.0.0 1b2e1d63ff</code> </p>
-      <p>1b2e1d63ff hace referencia a los 10 carácteres del commit id al cual quieres referirte con tu etiqueta. Puedes obtener el commit id utilizando: <code>git log</code> </p>
-      <p>También puedes usar menos carácteres que el commit id, pere debe ser un valor único.</p>
-    </div>
+      <div class="texto">
+        <h2>Flujo de trabajo</h2>
+        <p>Tu repositorio local está compuesto por tres "árboles" administrados por git.</p> 
+        <p>El primero es tu DIRECTORIO DE TRABAJO, que contiene los archivos.</p> 
+        <p>El segundo es el INDEX, que actúa como una zona intermedia.</p> 
+        <p>Y, finalmente se encuentra el HEAD, que apunta al último commit realizado.</p>
+        <div align="center"><img src="arbol.png" alt></div>
+      </div>
 
-    <div class="texto">
-      <h1>Conceptos básicos de Git</h1>
-      <h2>Reemplazo de cambios locales</h2>
-      <p>En caso de que hagas algo mal, puedes reemplazar cambios locales usando el siguiente comando: <code>git checkout -- < nombre del fichero ></code> </p>
-      <p>Este comando reemplaza los cambios en tu directorio de trabajo con el último contenido de HEAD. Los cambios que ya han sido agregados al INDEX, así como también los nuevos archivos, se mantendrán sin cambio.</p>
-      <p>     </p>
-      <p>Por otro lado, si quieres deshacer todos los cambios locales y commits, puedes traer la última versión del servidor y apuntar a tu copia local principal de esta forma: <code>git fetch origin</code><code>git reset --hard origin/master</code> </p>
-    </div>
+      <div class="texto">
+        <h2>Add y Commit</h2>
+        <p>Puedes registrar cambios (añadirlos al INDEX) usando</p><br>
+        <code>git add < nombredelfichero ></code> <br>
+        <p>o</p>
+        <code>git add .</code>
+        </p><br>
 
-    <div class="texto">
-      <h1>Conceptos básicos de Git</h1>
-      <h2>Datos útiles</h2>
-      <p>Interfaz gráfica por defecto: <Code>gitk</Code> </p>
-      <p>Colores especiales para la consola: <code>git config color.ui true</code></4> </p>
-      <p>Mostrar sólo una línea por cada commit en la traza <code>git config format.pretty oneline</code> </p>
-      <p>Agregar archivos de forma interactiva: <code>git add -i</code> </p>
-    </div>
-  <script src="index.js"></script>
+        <p>
+        <p>Este es el primer paso en el flujo de trabajo básico. Para hacer commit a estos usa</p>
+        <br><code>git commit -m "Mensaje del commit"</code><br><br>
+        <p>Ahora el archivo está incluído en el HEAD, pero aún no lo está en tu repositorio remoto.</p>
+        </p>
+      </div>
 
-</body>
+      <div class="texto">
+        <h2>Envío de cambios</h2>
+        <p>Tus cambios ahora están en el HEAD de tu copia local. Para enviar estos cambios a tu repositorio remoto ejecuta</p>
+
+        <br> <code>git push origin master</code> <br><br>
+
+        <p>Reemplaza "master" por la rama a la que quieras enviar tus cambios.</p>
+        <p>Si no has clonado un repositorio ya existente y quieres conectar tu repositorio local a un repositorio remoto, debes usar: </p>
+
+        <br> <code>git remote add origin < server > </code> <br><br>
+
+        <p>Ahora podrás subir tus cambios al repositorio remoto seleccionado.</p>
+      </div>  
+
+      <div class="texto">
+        <h2>Ramas</h2>
+        <p>Las ramas son utilizadas para desarrollar funcionalidades aisladas unas de otras. La rama MASTER es la rama "por defecto" cuando creas un repositorio. Crea nuevas ramas durante el desarrollo y fusiónalas a la rama principal cuando termines.</p>
+        <div align="center"><img src="branches.png" alt></div>
+        <p>Crea una nueva rama llamada "feature_x" y cámbiate a ella usando: 
+        <br>
+        <code>git checkout -b feature_x</code><br><br> </p>
+        <p>vuelve a la rama principal 
+        <br>
+        <code>git checkout master</code><br><br> </p>
+        <p>y borra la rama 
+        <br>
+        <code>git branch -d feature_x</code><br<br> </p>
+        <p>     </p>
+        <br>
+        <p>Una rama nueva no estará disponible para las demás a menos que subas (push) la rama a tu repositorio remoto utilizando: 
+        <br><code>git push origin < branch ></code><br><br> </p>
+      </div>
+
+      <div class="texto">
+        <h2>Etiquetas</h2>
+        <p>Se recomienda crear etiquetas para cada nueva versión publicada de un software. Este concepto no es nuevo, ya que estaba disponible en SVN.</p>
+        <p>Puedes crear una nueva etiqueta llamada 1.0.0 ejecutando: 
+        <br>
+        <br><code>git tag 1.0.0 1b2e1d63ff</code><br><br> </p>
+        <p>1b2e1d63ff hace referencia a los 10 carácteres del commit id al cual quieres referirte con tu etiqueta. Puedes obtener el commit id utilizando: 
+        <br>
+        <br><code>git log</code><br><br> </p>
+        <p>También puedes usar menos carácteres que el commit id, pere debe ser un valor único.</p>
+      </div>
+
+      <div class="texto">
+        <h2>Reemplazo de cambios locales</h2>
+        <p>En caso de que hagas algo mal, puedes reemplazar cambios locales usando el siguiente comando: 
+        <br>
+        <br><code>git checkout -- < nombre del fichero ></code><br><br> </p>
+        <p>Este comando reemplaza los cambios en tu directorio de trabajo con el último contenido de HEAD. Los cambios que ya han sido agregados al INDEX, así como también los nuevos archivos, se mantendrán sin cambio.</p>
+        <p>     </p>
+        <p>Por otro lado, si quieres deshacer todos los cambios locales y commits, puedes traer la última versión del servidor y apuntar a tu copia local principal de esta forma: 
+        <br>
+        <br><code>git fetch origin</code><br>
+        <br><code>git reset --hard origin/master</code><br></p>
+      </div>
+
+      <div class="texto">
+        <!-- <h1>Conceptos básicos de Git</h1> -->
+        <h2>Datos útiles</h2>
+        <p>Interfaz gráfica por defecto: 
+        <br>
+        <code>gitk</Code><br><br> </p>
+        <p>Colores especiales para la consola: 
+        <br>
+        <code>git config color.ui true</code><br><br> </p>
+        <p>Mostrar sólo una línea por cada commit en la traza 
+        <br>
+         <code>git config format.pretty oneline</code><br><br> </p>
+        <p>Agregar archivos de forma interactiva: 
+        <br>
+        <code>git add -i</code><br><br> </p>
+      </div>
+      <script src="index.js"></script>
+
+  </body>
 </html>

@@ -11,11 +11,6 @@ h1{
   background-color: #ededed;
   padding: 1em 0;
   color: #414142;
-
-  /* line-height: 1.5em; */
-  /* font-family: Arial; */
-  /* box-sizing: border-box; */
-  /* font-size: 1em; */
 }
 
 h2{
@@ -34,9 +29,17 @@ code {
 
 #texto_actual {
   margin: 25px 50px 25px 50px;
+
+  margin: auto;
+  width: 50%;
 }
 
-h1,h2,h3,h4,p{
+img {
+  margin: auto;
+  width: 100%;
+}
+
+h1,h2,h3,h4, #texto_actual, #botones{
   text-align: center;
 }
 
@@ -54,22 +57,11 @@ h1,h2,h3,h4,p{
   margin-bottom: 20px;
 }
 
-#anterior {
-  position:absolute;
-  bottom: 5%;
-  left:20%;
-}
-
-#siguiente {
-  position:absolute;
-  bottom: 5%;
-  right:20%
-}
-
 #anterior:hover, #siguiente:hover {
  text-decoration: underline;
  cursor: pointer;
- background-color: #862348;
+ /* background-color: #862348; */
+ background-color: black;
 }
 
 .centrado {
@@ -77,7 +69,3 @@ h1,h2,h3,h4,p{
   margin-left: auto;
   margin-right: auto;
 }
-
-/* img#workflow-git { */
-/*   width: 70%; */
-/* } */
